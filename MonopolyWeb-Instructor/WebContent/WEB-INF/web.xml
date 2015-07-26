@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>Monopoly</display-name>
+  <context-param>
+    <param-name>defaultNumberOfPlayers</param-name>
+    <param-value>6</param-value>
+  </context-param>
+  <servlet>
+    <servlet-name>MonopolyServlet</servlet-name>
+    <servlet-class>com.aa.monopoly.web.MonopolyServlet</servlet-class>
+    <init-param>
+      <param-name>numberOfPlayers</param-name>
+      <param-value>4</param-value>
+    </init-param>
+  </servlet>
+  <servlet>
+    <servlet-name>ControllerServlet</servlet-name>
+    <servlet-class>com.aa.monopoly.web.ControllerServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CreateGameServlet</servlet-name>
+    <servlet-class>com.aa.monopoly.web.CreateGameServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>MonopolyJSP</servlet-name>
+    <jsp-file>/game.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ControllerServlet</servlet-name>
+  	<url-pattern>/controller</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MonopolyJSP</servlet-name>
+    <url-pattern>/playJSP</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MonopolyServlet</servlet-name>
+    <url-pattern>/play</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CreateGameServlet</servlet-name>
+    <url-pattern>/new</url-pattern>
+    <url-pattern>/New</url-pattern>
+  </servlet-mapping>
+</web-app>

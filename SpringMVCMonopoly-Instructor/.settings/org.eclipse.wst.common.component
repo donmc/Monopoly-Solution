@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="SpringMVCMonopoly-Instructor">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/stuff"/>
+        <dependent-module archiveName="Monopoly-Instructor.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Monopoly-Instructor/Monopoly-Instructor">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="SpringMVCMonopoly-Instructor"/>
+        <property name="java-output-path" value="/SpringMVCMonopoly-Instructor/build/classes"/>
+    </wb-module>
+</project-modules>
